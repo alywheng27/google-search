@@ -15,8 +15,8 @@ const SearchComponent = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const apiKey = 'AIzaSyATqHyIoZgFjw7G1JXH_Pnp9MIK5igrrtE';
-  const searchEngineId = '64064ada5362f4478';
+  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+  const searchEngineId = process.env.NEXT_PUBLIC_SEARCH_ENGINE_ID;
 
   const handleSearch = async (e) => {
     e.preventDefault();
